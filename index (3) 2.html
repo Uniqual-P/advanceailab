@@ -1,0 +1,736 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beijing Xiangjia Technology Co., Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36BFFA',
+                        accent: '#FF7D00',
+                        dark: '#1D2939',
+                        light: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+        }
+    </style>
+    <meta name="google-site-verification" content="sEdae5aLQrM0k4pnClXFMtjXZ0UP2ILa8hNd8rAsELY" />
+</head>
+<body class="font-inter bg-light text-dark">
+    <!-- Navigation -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <div class="flex items-center">
+                    <span class="text-primary font-bold text-xl md:text-2xl">Xiangjia<span class="text-accent">Tech</span></span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-dark hover:text-primary transition-colors font-medium">About</a>
+                    <a href="#vision" class="text-dark hover:text-primary transition-colors font-medium">Vision &amp; Mission</a>
+                    <a href="#products" class="text-dark hover:text-primary transition-colors font-medium">Products</a>
+                    <a href="#technology" class="text-dark hover:text-primary transition-colors font-medium">Technology</a>
+                    <a href="#global" class="text-dark hover:text-primary transition-colors font-medium">Global Reach</a>
+                    <a href="#contact" class="text-dark hover:text-primary transition-colors font-medium">Contact</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-dark hover:text-primary focus:outline-none">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 space-y-2">
+                <a href="#about" class="block py-2 text-dark hover:text-primary transition-colors">About</a>
+                <a href="#vision" class="block py-2 text-dark hover:text-primary transition-colors">Vision &amp; Mission</a>
+                <a href="#products" class="block py-2 text-dark hover:text-primary transition-colors">Products</a>
+                <a href="#technology" class="block py-2 text-dark hover:text-primary transition-colors">Technology</a>
+                <a href="#global" class="block py-2 text-dark hover:text-primary transition-colors">Global Reach</a>
+                <a href="#contact" class="block py-2 text-dark hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 -z-10"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-dark mb-4">
+                        Transforming Digital Content <span class="text-primary">With AI</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">
+                        We're dedicated to creating user-centric AI solutions that bridge technology and creativity, making advanced image processing accessible to everyone.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#products" class="px-6 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-primary/30 flex items-center">
+                            <span>Explore Products</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#contact" class="px-6 py-3 bg-white hover:bg-gray-50 text-primary border border-primary font-medium rounded-lg transition-all shadow-md hover:shadow-lg flex items-center">
+                            <span>Contact Us</span>
+                            <i class="fa fa-envelope ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl transform md:rotate-2 hover:rotate-0 transition-all duration-500">
+                        <img src="https://picsum.photos/id/1/600/400" alt="AI Image Processing Technology" class="w-full h-auto">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-accent/20 rounded-full filter blur-3xl -z-10"></div>
+                    <div class="absolute -top-6 -left-6 w-40 h-40 bg-primary/20 rounded-full filter blur-3xl -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">About <span class="text-primary">Xiangjia Tech</span></h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Founded in 2018, we're a leading innovator in artificial intelligence and image processing technology.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-light rounded-xl p-8 shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-calendar text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Established in 2018</h3>
+                    <p class="text-gray-600">
+                        Beijing Xiangjia Technology Co., Ltd. was founded with a vision to make advanced AI technology accessible to everyone.
+                    </p>
+                </div>
+                <div class="bg-light rounded-xl p-8 shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-map-marker text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Headquartered in Beijing</h3>
+                    <p class="text-gray-600">
+                        While based in Beijing, we serve a global audience with our AI-driven image processing solutions.
+                    </p>
+                </div>
+                <div class="bg-light rounded-xl p-8 shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-users text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Expert Team</h3>
+                    <p class="text-gray-600">
+                        Our team of AI engineers and data scientists continuously refines algorithms to deliver superior user experiences.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-16 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                        <h3 class="text-2xl font-bold mb-4">Our Journey</h3>
+                        <p class="text-gray-600 mb-6">
+                            Since our founding, we've been dedicated to developing intelligent tools that empower users to transform their digital content effortlessly. We believe that advanced technology should be accessible to everyone, regardless of technical expertise.
+                        </p>
+                        <p class="text-gray-600">
+                            Our products are designed to simplify complex image processing tasks, allowing users from all backgrounds to unlock their creative potential.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://picsum.photos/id/20/600/400" alt="Company Growth and Innovation" class="rounded-xl shadow-lg w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision" class="py-16 md:py-24 bg-gradient-to-br from-dark to-dark/90 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">Our <span class="text-primary">Vision &amp; Mission</span></h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                    We're on a mission to make advanced AI technology accessible to everyone, enabling seamless creation and transformation of visual content.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-dark/50 backdrop-blur-sm rounded-xl p-8 border border-white/10 shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fa fa-eye text-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Our Vision</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        We envision a world where advanced AI technology is accessible to everyone, enabling seamless creation and transformation of visual content. We believe that technology should empower, not complicate, allowing individuals and businesses to focus on their creativity and goals.
+                    </p>
+                </div>
+                <div class="bg-dark/50 backdrop-blur-sm rounded-xl p-8 border border-white/10 shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fa fa-bullseye text-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Our Mission</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Our mission is to design intuitive, high-performance applications that simplify complex image processing tasks. We aim to create tools that cater to a wide range of users—from casual creators to professional designers—unlocking their creative potential through the power of AI.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-dark/50 backdrop-blur-sm rounded-lg p-6 border border-white/10 text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">100K+</div>
+                    <p class="text-gray-300">Active Users</p>
+                </div>
+                <div class="bg-dark/50 backdrop-blur-sm rounded-lg p-6 border border-white/10 text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">5+</div>
+                    <p class="text-gray-300">AI Products</p>
+                </div>
+                <div class="bg-dark/50 backdrop-blur-sm rounded-lg p-6 border border-white/10 text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">50+</div>
+                    <p class="text-gray-300">Countries Reached</p>
+                </div>
+                <div class="bg-dark/50 backdrop-blur-sm rounded-lg p-6 border border-white/10 text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">98%</div>
+                    <p class="text-gray-300">User Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 md:py-24 bg-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">Our <span class="text-primary">AI Products</span></h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Leveraging state-of-the-art machine learning algorithms, our products simplify complex image processing tasks.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/3944e60b29484fe78ccd8ff4dbcd3b31~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1752845787&amp;x-signature=zkhAdi%2BKRd2YU7srOfhZUGPwWjU%3D" alt="AI Generator" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-primary text-white text-sm font-medium rounded-full">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">AI Generator</h3>
+                        <p class="text-gray-600 mb-4">
+                            Turn your ideas into stunning visuals with our advanced text-to-image technology. Create professional-quality artwork in seconds.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-medium">Advanced AI Lab</span>
+                            <i class="fa fa-arrow-right text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/0e8bba72f8be4b24821f5be533e20c75~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1752846112&amp;x-signature=VF21Gq6wkBDbQJ9ZBRTR9YHLbHM%3D" alt="Cartoon Photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-primary text-white text-sm font-medium rounded-full">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Cartoon Photo</h3>
+                        <p class="text-gray-600 mb-4">
+                            Convert your real photos into playful, artistic cartoons in seconds. Choose from various styles to suit your creative vision.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-medium">Advanced AI Lab</span>
+                            <i class="fa fa-arrow-right text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/f8a743a7a1e348969acf08d2df5432a3~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1752847285&amp;x-signature=3o8yYusIPXMTicdU1lq9hUURKAc%3D" alt="Photo Effect" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-primary text-white text-sm font-medium rounded-full">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Photo Effect</h3>
+                        <p class="text-gray-600 mb-4">
+                            Enhance your images with professional-grade filters and stylizations. Transform ordinary photos into extraordinary works of art.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-medium">Advanced AI Lab</span>
+                            <i class="fa fa-arrow-right text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/927403459cd34919a0c82b805cf377e3~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1752844704&amp;x-signature=vy5ncV4BNL%2Br11pdeANiFgTwaw8%3D" alt="Background Remove" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-primary text-white text-sm font-medium rounded-full">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Background Remove</h3>
+                        <p class="text-gray-600 mb-4">
+                            Effortlessly erase or replace image backgrounds with precision tools. Perfect for product photos, portraits, and creative projects.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-medium">Advanced AI Lab</span>
+                            <i class="fa fa-arrow-right text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/db1c6323129c43b6b9e95d941b29f2ba~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1752844466&amp;x-signature=buDDAL2gzFZFd6K76H2o0w5O7ao%3D" alt="Compress Image" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-primary text-white text-sm font-medium rounded-full">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Compress Image</h3>
+                        <p class="text-gray-600 mb-4">
+                            Optimize your image file sizes without compromising quality. Perfect for websites, social media, and email attachments.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-medium">Advanced AI Lab</span>
+                            <i class="fa fa-arrow-right text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/d5ee8d3d2a854f429850152fa3938c3a~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1752845765&amp;x-signature=EY9sv%2Bda9hgR4Pj8RkxMI%2F259JE%3D" alt="Advanced AI Lab" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Advanced AI Lab</h3>
+                        <p class="text-gray-600 mb-4">Explore our complete suite of AI-powered image processing tools. From basic edits to advanced transformations, we've got you covered.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="https://xjailab.com" target="_blank" class="text-primary font-medium hover:underline">Visit on Google Play</a>
+                            <i class="fa fa-external-link text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 text-center">
+                <a href="#contact" class="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-primary/30">
+                    <span>Stay Updated on New Products</span>
+                    <i class="fa fa-paper-plane ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">Technology &amp; <span class="text-primary">Innovation</span></h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Our team of AI engineers and data scientists continuously refines algorithms to deliver superior accuracy, speed, and user experience.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="bg-light rounded-xl p-8 shadow-lg mb-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-code text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-3">State-of-the-Art Algorithms</h3>
+                                <p class="text-gray-600">
+                                    Our team leverages cutting-edge machine learning techniques to develop algorithms that deliver exceptional results in image processing tasks.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded-xl p-8 shadow-lg mb-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-shield text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-3">Ethical AI Practices</h3>
+                                <p class="text-gray-600">
+                                    We prioritize ethical AI practices, ensuring data security and privacy while pushing the boundaries of what visual AI can achieve.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded-xl p-8 shadow-lg">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-bolt text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-3">Performance &amp; Speed</h3>
+                                <p class="text-gray-600">
+                                    Our optimized algorithms deliver high-performance results quickly, ensuring a seamless user experience even with complex image processing tasks.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl">
+                        <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/e8243961a7ca4cbf9795cb7addb8419c~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1752847213&amp;x-signature=ig80k4Usl0YO6MyP3aRwrhsk%2BTA%3D" alt="AI Technology Development" class="w-full h-auto">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-accent/20 rounded-full filter blur-3xl -z-10"></div>
+                    <div class="absolute -top-6 -left-6 w-40 h-40 bg-primary/20 rounded-full filter blur-3xl -z-10"></div>
+                </div>
+            </div>
+            <div class="mt-16 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 md:p-12">
+                <h3 class="text-2xl font-bold mb-6 text-center">Our Technology Stack</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-lg p-6 text-center shadow-md">
+                        <div class="text-4xl mb-3 text-primary">
+                            <i class="fa fa-microchip"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Machine Learning</h4>
+                        <p class="text-sm text-gray-600">Advanced neural networks for image understanding</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 text-center shadow-md">
+                        <div class="text-4xl mb-3 text-primary">
+                            <i class="fa fa-cloud"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Cloud Computing</h4>
+                        <p class="text-sm text-gray-600">Scalable infrastructure for high-performance processing</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 text-center shadow-md">
+                        <div class="text-4xl mb-3 text-primary">
+                            <i class="fa fa-mobile"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Mobile Development</h4>
+                        <p class="text-sm text-gray-600">Optimized apps for seamless mobile experience</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 text-center shadow-md">
+                        <div class="text-4xl mb-3 text-primary">
+                            <i class="fa fa-lock"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Security &amp; Privacy</h4>
+                        <p class="text-sm text-gray-600">Advanced encryption and data protection protocols</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Reach Section -->
+    <section id="global" class="py-16 md:py-24 bg-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">Global <span class="text-primary">Reach</span></h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">While rooted in Beijing, we serve a global audience through our Google Play offerings, committed to delivering multilingual support and cross-platform compatibility.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold mb-6">Our Global Presence</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-globe text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">50+ Countries</h4>
+                                <p class="text-gray-600">Our products are used by customers in over 50 countries worldwide.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-language text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">10+ Languages</h4>
+                                <p class="text-gray-600">We provide multilingual support to ensure our tools are accessible to a global audience.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-mobile text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Cross-Platform</h4>
+                                <p class="text-gray-600">Our applications are available on multiple platforms, ensuring compatibility with various devices.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-comments text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">24/7 Support</h4>
+                                <p class="text-gray-600">Our dedicated support team is available around the clock to assist our global users.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="relative w-full max-w-xl">
+                        <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl">
+                            <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/a1ce0e118b904885872caaa25a7876a3~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1752847614&amp;x-signature=A61jUESpP1N6PxRfBjKpGtxi5jw%3D" alt="Global Reach Map" class="w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">Get In <span class="text-primary">Touch</span></h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    We're always looking for opportunities to collaborate and help transform your digital experience. Contact us to learn more.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="bg-light rounded-xl p-8 shadow-lg">
+                        <h3 class="text-xl font-bold mb-6">Send Us a Message</h3>
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 outline-none transition-all" placeholder="Your name">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 outline-none transition-all" placeholder="Your email">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 outline-none transition-all" placeholder="Message subject">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 outline-none transition-all resize-none" placeholder="Your message"></textarea>
+                            </div>
+                            <button type="submit" class="px-6 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-primary/30 flex items-center">
+                                <span>Send Message</span>
+                                <i class="fa fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-light rounded-xl p-8 shadow-lg mb-8">
+                        <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fa fa-envelope text-xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <p class="text-gray-600">uniqualp@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fa fa-map-marker text-xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Location</h4>
+                                    <p class="text-gray-600">Beijing, China</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fa fa-globe text-xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Website</h4>
+                                    <p class="text-gray-600">https://xjailab.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded-xl p-8 shadow-lg">
+                        <h3 class="text-xl font-bold mb-6">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-primary/10 hover:bg-primary/20 text-primary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary/10 hover:bg-primary/20 text-primary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary/10 hover:bg-primary/20 text-primary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary/10 hover:bg-primary/20 text-primary rounded-full flex items-center justify-center transition-colors">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Xiangjia<span class="text-accent">Tech</span></h3>
+                    <p class="text-gray-400 mb-4">
+                        Empowering creators with AI-driven image processing technology since 2018.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#vision" class="text-gray-400 hover:text-white transition-colors">Vision &amp; Mission</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#technology" class="text-gray-400 hover:text-white transition-colors">Technology</a></li>
+                        <li><a href="#global" class="text-gray-400 hover:text-white transition-colors">Global Reach</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">AI Generator</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Cartoon Photo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Photo Effect</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Background Remove</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Compress Image</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">
+                        Subscribe to our newsletter to receive updates on new products and features.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full focus:outline-none text-dark">
+                        <button type="submit" class="bg-primary hover:bg-primary/90 px-4 py-2 rounded-r-lg transition-colors">
+                            <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>© 2025 Beijing Xiangjia Technology Co., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('bg-white/90');
+                navbar.classList.add('bg-white');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('bg-white/90');
+                navbar.classList.remove('bg-white');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+    </body></html>
